@@ -1,0 +1,25 @@
+info:
+  app:
+    name: fps-bus-ms-sited
+    description: Microservice to manage beneficiarios, cobertura y autorización
+  version: 1.0.0
+
+logging:
+  config: classpath:logging/logback.xml
+
+spring:
+  application:
+    name: fps-bus-ms-sited
+  jackson:
+    default-property-inclusion: NON_NULL
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        implicit_naming_strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+        physical_naming_strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        dialect: org.hibernate.dialect.Oracle12cDialect
+  main:
+    allow-bean-definition-overriding: true

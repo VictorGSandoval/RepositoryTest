@@ -1,0 +1,19 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: fps-bus-ms-sited
+  flyway:
+    validateOnMigrate: false
+  jackson:
+    default-property-inclusion: non_null
+logging:
+  config: classpath:logging/logback.xml
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info, health, metrics
